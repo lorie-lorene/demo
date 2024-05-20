@@ -8,32 +8,32 @@ import springcloud.model.Student;
 
 public class StudentServiceTest {
 
-    // @Mock
-    // private StudentService service;
-    // @Test
-    // void testCreate() {
-    //     Student st= new Student("5","kk","ke","k");
-    //     service.create(st);
+    @Mock
+    private StudentService service;
+    @Test
+    void testCreate() {
+        Student st= new Student("5","kk","ke","k");
+        service.create(st);
         
-    // }
+    }
 
-    // @Test
-    // void testDeleteStudent() {
+    @Test
+    void testDeleteStudent() {
 
-    // }
+    }
 
-    // @Test
-    // void testGetStudAll() {
+    @Test
+    void testGetStudAll() {
 
-    // }
+    }
 
-    // @Test
-    // void testGetStudentById() {
+    @Test
+    void testGetStudentById() {
 
-    // }
+    }
 
-    // @Test
-    // void testUpdateStudent() {
+    @Test
+    void testUpdateStudent() {
 
-    // }
+    }
 }
