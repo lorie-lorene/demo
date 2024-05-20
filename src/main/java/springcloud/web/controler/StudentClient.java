@@ -24,33 +24,33 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/student")
 
 public class StudentClient {
-   // @Autowired
-    // private StudentService service;
-    // @GetMapping("")
-    // public List <Student> getStudentAll(){
-    //     return service.getStudAll();
-    // }
+   @Autowired
+    private StudentService service;
+    @GetMapping("")
+    public List <Student> getStudentAll(){
+        return service.getStudAll();
+    }
 
-    // @PostMapping("/create")
-    // public String postMethodName(@RequestBody Student st) {
-    //   service.create(st);
-    //     return "success";
-    // }
+    @PostMapping("/create")
+    public String postMethodName(@RequestBody Student st) {
+      service.create(st);
+        return "success";
+    }
     
-    // @GetMapping("{id}")
-    //  public Student getStudentById(@PathVariable ("id") String id){
-    //     return service.getStudentById(id);
-    //  }
+    @GetMapping("{id}")
+     public Student getStudentById(@PathVariable ("id") String id){
+        return service.getStudentById(id);
+     }
 
-    // @PutMapping("/update/{id}")
-    // public Student updateStudent(@PathVariable ("id")String id, @RequestBody Student student){
-    //     Student st =service.updateStudent(id,student);
-    //     return st;
-    // }
+    @PutMapping("/update/{id}")
+    public Student updateStudent(@PathVariable ("id")String id, @RequestBody Student student){
+        Student st =service.updateStudent(id,student);
+        return st;
+    }
 
-    // @DeleteMapping("/delete/{id}")
-    // public void  deleteStudent(@PathVariable ("id") String id){
-    //         service.deleteStudent(id);
-    // }
+    @DeleteMapping("/delete/{id}")
+    public void  deleteStudent(@PathVariable ("id") String id){
+            service.deleteStudent(id);
+    }
 
 }
